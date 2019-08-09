@@ -11,9 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('UserHome');
+Route::get('/admin', function () {
+    return view('home');
 });
+
+Route::get('/{any}', function () {
+    return view('UserHome');
+})->where('any', '.*');
+
+
 //
 //   Route::post('/users', 'UserController@store');
 // Route::prefix('/v1/users')->group(function(){
