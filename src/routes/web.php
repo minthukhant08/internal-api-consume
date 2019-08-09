@@ -11,9 +11,9 @@
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('UserHome');
+});
 //
 //   Route::post('/users', 'UserController@store');
 // Route::prefix('/v1/users')->group(function(){
@@ -33,4 +33,8 @@
 
 Auth::routes();
 
-Route::resource('user', 'UserController');
+Route::resource('users', 'UserController');
+Route::resource('courses', 'CourseController');
+// Route::resource('course_details', 'CourseDetailController');
+Route::resource('batches', 'BatchController');
+Route::resource('activities', 'ActivityController');

@@ -3,7 +3,6 @@
 namespace App\Http\WebControllers;
 
 use Illuminate\Http\Request;
-use GuzzleHttp\Client;
 use App\Http\ApiControllers\Controller;
 use App\Http\ApiControllers\UserController as API;
 
@@ -47,7 +46,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-      
+
     }
 
     /**

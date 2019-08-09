@@ -21,13 +21,16 @@ Route::group(['prefix' => 'v1/users'], function()
 {
       Route::post('/', 'UserController@store');
       Route::post('/login', 'UserController@login');
+      Route::get('/image/{id}', 'UserController@image');
 });
+
+Route::get('v1/courses/image/{id}', 'CourseController@image');
+Route::get('v1/activities/image/{id}', 'ActivityController@image');
 
 Route::group(['prefix' => 'v1/users',  'middleware' => 'jwt.auth'], function()
 {
       Route::get('/', 'UserController@index');
       Route::get('/{id}', 'UserController@show');
-      Route::get('/image/{id}', 'UserController@image');
       Route::put('/{id}', 'UserController@update');
       Route::delete('/{id}', 'UserController@destroy');
 });
@@ -36,7 +39,6 @@ Route::group(['prefix' => 'v1/courses',  'middleware' => 'jwt.auth'], function()
 {
       Route::get('/', 'CourseController@index');
       Route::get('/{id}', 'CourseController@show');
-      Route::get('/image/{id}', 'CourseController@image');
       Route::post('/', 'CourseController@store');
       Route::put('/{id}', 'CourseController@update');
       Route::delete('/{id}', 'CourseController@destroy');
@@ -53,7 +55,6 @@ Route::group(['prefix' => 'v1/activities',  'middleware' => 'jwt.auth'], functio
 {
       Route::get('/', 'ActivityController@index');
       Route::get('/{id}', 'ActivityController@show');
-      Route::get('/image/{id}', 'ActivityController@image');
       Route::post('/', 'ActivityController@store');
       Route::put('/{id}', 'ActivityController@update');
       Route::delete('/{id}', 'ActivityController@destroy');

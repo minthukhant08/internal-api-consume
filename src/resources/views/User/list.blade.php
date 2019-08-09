@@ -16,7 +16,6 @@
               <th>Name</th>
               <th>Gender</th>
               <th>User Type</th>
-              <th>Phone No</th>
               <th>Details</th>
               <th>Update</th>
               <th>Delete</th>
@@ -29,7 +28,6 @@
                   <td>{{$user->name}}</td>
                   <td>{{$user->gender}}</td>
                   <td>{{$user->user_type}}</td>
-                  <td>{{$user->phone_no}}</td>
 
                   <td>
                       <a href="{{url('/users/show/'. $user->id)}}" class="btn primary">Details</a>
