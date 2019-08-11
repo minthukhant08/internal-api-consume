@@ -38,12 +38,21 @@
             <v-list-item-title>User Table</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
+        <v-list-item @click="goRoute('/login')">
+          <v-list-item-action>
+            <v-icon>person</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>Login</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
       </v-list>
     </v-navigation-drawer>
 
     <v-app-bar
       app
       clipped-left
+      color=primary
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       <v-toolbar-title>Application</v-toolbar-title>

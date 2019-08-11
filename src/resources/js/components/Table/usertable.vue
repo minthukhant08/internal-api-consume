@@ -18,7 +18,7 @@
         :search="search"
       ></v-data-table>
     </v-card>
-    <v-btn block color='green' @click='login'>Login</v-btn>
+    <v-btn block color=accent @click='login'>Login</v-btn>
     <v-btn block color='blue' @click='getall'>Get All</v-btn>
   </div>
 </template>

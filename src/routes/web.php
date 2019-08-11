@@ -15,6 +15,8 @@ Route::get('/admin', function () {
     return view('home');
 });
 
+Route::get('/sendmail', 'MailController@sendConfirm');
+
 Route::get('/{any}', function () {
     return view('UserHome');
 })->where('any', '.*');
