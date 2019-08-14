@@ -11,14 +11,15 @@
 |
 */
 
-Route::get('/admin', function () {
-    return view('home');
-});
+Route::get('/admin/{any}', function () {
+    return view('Admin');
+})->where('any', '.*');
+
 
 Route::get('/sendmail', 'MailController@sendConfirm');
 
 Route::get('/{any}', function () {
-    return view('UserHome');
+    return view('User');
 })->where('any', '.*');
 
 

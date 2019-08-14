@@ -25,6 +25,11 @@ class ActivityController extends Controller
       // $token = $this->api->login($request);
       $response = $this->activityApi->index($request);
       $response = $response->getData()->data;
+      if ($response->getData()->success) {
+        // code...
+      }else{
+        $response->getData()->errors
+      }
       return view('Activity.list', compact('response'));
     }
 
